@@ -41,3 +41,4 @@ public class MoveController {
     public ResponseEntity<Object> getAll() throws JokenpoException {
         return ResponseEntity.ok(new ApiResponse<>(this.moveService.getAll()));
     }
+}    

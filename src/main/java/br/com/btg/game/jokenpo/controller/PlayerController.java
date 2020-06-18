@@ -41,3 +41,4 @@ public class PlayerController {
     public ResponseEntity<Object> getAll() throws JokenpoException {
         return ResponseEntity.ok(new ApiResponse<>(this.playerService.getAll()));
     }
+}

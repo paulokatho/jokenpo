@@ -29,3 +29,4 @@ public class JokenpoController {
     public ResponseEntity<Object> play() throws JokenpoException {
         return ResponseEntity.ok(new ApiResponse<>(this.jokenpoService.play()));
     }
+}    
