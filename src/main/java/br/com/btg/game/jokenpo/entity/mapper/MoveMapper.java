@@ -5,6 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import br.com.btg.game.jokenpo.entity.MoveEntity;
+import br.com.btg.game.jokenpo.entity.dto.MoveRequest;
+import br.com.btg.game.jokenpo.entity.dto.MoveResponse;
 
 public class MoveMapper {
 

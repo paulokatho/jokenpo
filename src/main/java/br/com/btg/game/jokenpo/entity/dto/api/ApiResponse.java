@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-public class ApiResponse {
+public class ApiResponse<T> {
 
 	private Meta meta;
 
