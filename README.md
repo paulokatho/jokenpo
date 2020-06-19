@@ -27,7 +27,7 @@ body: {
       }
 ```	
 
-### 2. Realizar as jogadas para os jogadores
+### 2. Cadastrar as jogadas para os jogadores
 
 url: http://localhost:8080/jokenpo/move
 
@@ -44,7 +44,9 @@ body: {
 ### 3. Executar o jokenpô
 
 url: http://localhost:8080/jokenpo/play
-Zera a jogada de todos os participantes para os jogadores escolherem novamente suas jogadas e fazer o jokenpô
+
+Essa API zera a jogada de todos os participantes para os jogadores escolherem novamente suas jogadas e fazer o jokenpô
 		
 ### 4. O jokenpô zera e os jogadores podem fazer uma nova jogada
-Retorna um array vazio
+
+Retorna um array vazio para iniciar o jogo do zero
