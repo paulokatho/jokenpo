@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public enum EnumException {
 
-    // ERROR-1000
+    //ERROR-1000
     MOVEMENT_NOT_FOUND("ERROR-1001", "JOKENPO", "MOVEMENT", "NOT FOUND", "Movement not found"),
     MOVEMENT_ALREADY_EXISTS("ERROR-1002", "JOKENPO", "MOVEMENT", "ALREADY EXISTS", "This player has played before"),
     MOVEMENT_INVALID("ERROR-1003", "JOKENPO", "MOVEMENT", "INVALID", "Invalid movement"),
@@ -12,7 +12,7 @@ public enum EnumException {
     MOVEMENT_DELETE_ERROR("ERROR-1005", "JOKENPO", "MOVEMENT", "SAVE", "Error deleting"),
     MOVEMENT_FIND_ALL_ERROR("ERROR-1006", "JOKENPO", "MOVEMENT", "FIND ALL", "Error locating movements"),
     
-    // ERROR-2000
+    //ERROR-2000
     NOBODY_PLAYING("ERROR-2001", "JOKENPO", "PLAY", "NOBODY", "There's no one playing"),
     INSUFFICIENT_PLAYERS("ERROR-2002", "JOKENPO", "PLAY", "INSUFFICIENT PLAYERS", "Insufficient number of players"),
     INSUFFICIENT_MOVEMENTS("ERROR-2003", "JOKENPO", "PLAY", "INSUFFICIENT MOVEMENTS", "Number of movements still insufficient"),

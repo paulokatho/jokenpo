@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PlayerRequest {
 
 	@JsonProperty(value = "playerName")
-	@NotNull//(message = "Player name is required")
+	@NotNull(message = "Player name is required")
 	@NotBlank(message = "Player name cant not blank")
 	@Size(min = 3, max = 50)
     private String name;
