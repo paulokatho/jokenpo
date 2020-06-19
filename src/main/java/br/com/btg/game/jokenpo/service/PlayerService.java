@@ -5,7 +5,7 @@ import java.util.List;
 import br.com.btg.game.jokenpo.entity.PlayerEntity;
 import br.com.btg.game.jokenpo.entity.dto.PlayerRequest;
 import br.com.btg.game.jokenpo.entity.dto.PlayerResponse;
-import br.com.btg.game.jokenpo.exception.JokenpoException;
+import br.com.btg.game.jokenpo.util.exception.JokenpoException;
 
 public interface PlayerService {
 	

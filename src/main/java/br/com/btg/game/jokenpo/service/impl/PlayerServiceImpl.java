@@ -7,6 +7,7 @@ import java.util.Objects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -15,10 +16,13 @@ import br.com.btg.game.jokenpo.entity.dto.PlayerRequest;
 import br.com.btg.game.jokenpo.entity.dto.PlayerResponse;
 import br.com.btg.game.jokenpo.entity.mapper.PlayerMapper;
 import br.com.btg.game.jokenpo.enumeration.EnumException;
-import br.com.btg.game.jokenpo.exception.JokenpoException;
+import br.com.btg.game.jokenpo.repository.PlayerRepository;
+import br.com.btg.game.jokenpo.service.PlayerService;
+import br.com.btg.game.jokenpo.util.PlayerSingleton;
+import br.com.btg.game.jokenpo.util.exception.JokenpoException;
 
 @Service
-public class PlayerServiceImpl {
+public class PlayerServiceImpl implements PlayerService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(PlayerServiceImpl.class);
 
@@ -34,7 +38,7 @@ public class PlayerServiceImpl {
     public PlayerResponse insert(PlayerRequest player) throws JokenpoException {
         if(this.verifyIfAlreadyExistsByName(player.getName())){
             LOGGER.error("Player already exists");
-            throw new JokenpoException(EnumException.PLAYER_ALREADY_EXISTS);
+            throw new JokenpoException(EnumException.PLAYER_ALREADY_EXISTS, HttpStatus.BAD_REQUEST);
         }
         LOGGER.debug("Insert new player - Request: " + player.toString());
         PlayerEntity entity = PlayerMapper.requestToEntity(player);
@@ -64,7 +68,7 @@ public class PlayerServiceImpl {
     public List<PlayerResponse> deleteByName(String name) throws JokenpoException {
         if(StringUtils.isEmpty(name)){
             LOGGER.error("Param name invalid");
-            throw new JokenpoException(EnumException.INVALID_PARAM);
+            throw new JokenpoException(EnumException.INVALID_PARAM, HttpStatus.NOT_ACCEPTABLE);
         }
         try {
             this.moveService.deleteByPlayerName(name);
@@ -78,7 +82,7 @@ public class PlayerServiceImpl {
             return this.getAll();
         }
         LOGGER.error("Error deleting player");
-        throw new JokenpoException(EnumException.PLAYER_DELETE_ERROR);
+        throw new JokenpoException(EnumException.PLAYER_DELETE_ERROR, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     public void clearAll(){
