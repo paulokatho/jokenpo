@@ -5,7 +5,9 @@ import static java.util.Arrays.asList;
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.btg.game.jokenpo.exception.JokenpoException;
+import org.springframework.http.HttpStatus;
+
+import br.com.btg.game.jokenpo.util.exception.JokenpoException;
 
 public enum EnumMovement {
 
@@ -52,6 +54,6 @@ public enum EnumMovement {
                 return elem;
             }
         }
-        throw new JokenpoException(EnumException.MOVEMENT_NOT_FOUND);
+        throw new JokenpoException(EnumException.MOVEMENT_NOT_FOUND, HttpStatus.NOT_FOUND);
     }
 }
