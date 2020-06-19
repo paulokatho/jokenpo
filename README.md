@@ -16,8 +16,8 @@
 ###### Sem utilização de framework externo
 ###### Gradle
 
-Exemplos de como jogar:
-1. Cadastrar os jogadores
+## Exemplos de como jogar:
+### 1. Cadastrar os jogadores
 
 url: http://localhost:8080/jokenpo/player
 
@@ -27,7 +27,7 @@ body: {
       }
 ```	
 
-2. Realizar as jogadas para os jogadores
+### 2. Realizar as jogadas para os jogadores
 
 url: http://localhost:8080/jokenpo/move
 
@@ -38,23 +38,13 @@ body: {
       }
 ```      
 
-**Jogadas**
-
-SPOCK
-
-SCISSORS
-
-PAPER
-
-STONE
-
-LIZARD
+**Jogadas** : SPOCK, SCISSORS, PAPER, STONE, LIZARD
 
 		
-3. Executar o jokenpô
+### 3. Executar o jokenpô
 
 url: http://localhost:8080/jokenpo/play
 Zera a jogada de todos os participantes para os jogadores escolherem novamente suas jogadas e fazer o jokenpô
 		
-4. O jokenpô zera e os jogadores podem fazer uma nova jogada
+### 4. O jokenpô zera e os jogadores podem fazer uma nova jogada
 Retorna um array vazio
