@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.btg.game.jokenpo.entity.dto.PlayerRequest;
+import br.com.btg.game.jokenpo.entity.dto.api.ApiResponse;
+import br.com.btg.game.jokenpo.service.impl.PlayerServiceImpl;
+import br.com.btg.game.jokenpo.util.exception.JokenpoException;
+
 @RestController
 @RequestMapping("/player")
 @CrossOrigin(origins = "*")

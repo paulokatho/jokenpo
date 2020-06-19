@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.btg.game.jokenpo.entity.dto.MoveRequest;
+import br.com.btg.game.jokenpo.entity.dto.api.ApiResponse;
+import br.com.btg.game.jokenpo.service.impl.MoveServiceImpl;
+import br.com.btg.game.jokenpo.util.exception.JokenpoException;
+
 @RestController
 @RequestMapping("/move")
 @CrossOrigin(origins = "*")
