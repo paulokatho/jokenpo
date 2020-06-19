@@ -47,6 +47,8 @@ url: http://localhost:8080/jokenpo/play
 
 Essa API realiza o jokenpô informando quem venceu e zera todas as jogadas de todos jogadores. Assim os jogadores podem escolher novos movimentos/jogadas e fazer o jokenpô novamente
 		
-### 4. O jokenpô zera e os jogadores podem fazer uma nova jogada
+### 4. Zerar jogadas e jogadores
+
+url: http://localhost:8080/jokenpo/play
 
 Retorna um array vazio para iniciar o jogo do zero
