@@ -51,4 +51,4 @@ Essa API realiza o jokenpô informando quem venceu e zera todas as jogadas de to
 
 url: http://localhost:8080/jokenpo/play
 
-Retorna um array vazio para iniciar o jogo do zero
+Retorna um array vazio e o jogo é iniciado do zero
