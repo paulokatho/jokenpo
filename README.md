@@ -27,7 +27,7 @@ body: {
       }
 ```	
 
-### 2. Cadastrar as jogadas para os jogadores
+### 2. Cadastrar os movimentos/jogadas dos jogadores
 
 url: http://localhost:8080/jokenpo/move
 
@@ -45,7 +45,7 @@ body: {
 
 url: http://localhost:8080/jokenpo/play
 
-Essa API zera a jogada de todos os participantes para os jogadores escolherem novamente suas jogadas e fazer o jokenpô
+Essa API realiza o jokenpô informando quem venceu e zera todas as jogadas de todos jogadores. Assim os jogadores podem escolher novos movimentos/jogadas e fazer o jokenpô novamente
 		
 ### 4. O jokenpô zera e os jogadores podem fazer uma nova jogada
 
